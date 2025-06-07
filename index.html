@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>블록체인 추적관리 시스템</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">BlockchainTrace</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">사업소개</a></li>
+                    <li><a href="#services">플랫폼서비스</a></li>
+                    <li><a href="#research">연구자료</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="login-button">
+                <a href="/login.html" >
+                    로그인
+                </a>
+            </div>
+        </div>
+    </header>
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo">BlockchainTrace</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">사업소개</a></li>
+                    <li><a href="#services">플랫폼서비스</a></li>
+                    <li><a href="#research">연구자료</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="login-button">
+                <a href="/login.html">로그인</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="video-section">
+        <video autoplay muted loop playsinline id="main-video">
+          <source src="./images/bg1.mp4" type="video/mp4">
+          브라우저가 비디오 태그를 지원하지 않습니다.
+        </video>
+        <div class="video-overlay">
+            <h1>블록체인 기반의 "SW저작물" </h1>
+            <h1>유통 및 관리 플랫폼</h1>
+        </div>
+    </div>
+
+    <main>
+        <section class="intro-section" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>사업소개</h2>
+                </div>
+                <p class="section-description">
+                    블록체인 기술을 활용하여 신뢰 기반의 추적관리 시스템을 제공합니다.<br>
+                    다양한 산업의 공급망 투명성과 안전성을 확보합니다.
+                </p>
+                <div class="section-image">
+                    <img src="./images/introduction.png" alt="사업소개 이미지">
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section" id="services">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>플랫폼 서비스</h2>
+                </div>
+                <p class="section-description">
+                    플랫폼의 주요 기능을 통해 데이터의 신뢰성을 보장합니다.<br>
+                    실시간 추적과 사용자 맞춤형 리포트를 제공합니다.
+                </p>
+                <div class="service-cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>블록체인 서비스</h3>
+                            <p>블록체인 기술을 활용하여 데이터의 투명성과 신뢰성을</p> 
+                                <p> 보장하며다양한 산업에서 활용 가능한 솔루션을</p> 
+                                    <p>제공합니다.</p>
+                        </div>
+                        <img src="./images/blockchain-service.png" alt="블록체인 서비스 이미지">
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>SW 추적관리 서비스</h3>
+                            <p>소프트웨어 개발 및 배포 과정에서의 변경 사항을</p> 
+                            </p>추적하고 관리하여 품질과 신뢰성을 향상시킵니다.</p>
+                        </div>
+                        <img src="./images/blockchain-service.png" alt="SW 추적관리 서비스 이미지">
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>유통 모니터링 서비스</h3>
+                            <p>유통 과정에서의 제품 이동과 상태를 실시간으로</p> 
+                            </p>모니터링하여 공급망의 투명성을 확보합니다.</p>
+                        </div>
+                        <img src="./images/blockchain-service.png" alt="유통 모니터링 서비스 이미지">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-section" id="research">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>연구자료</h2>
+                </div>
+                <p class="section-description">
+                    블록체인 기반 시스템의 개념과 설계를 다룬 자료입니다.<br>
+                    다양한 사례와 기술 문서를 제공합니다.
+                </p>
+                <div class="research-tabs">
+                    <button data-target="tab1" class="tab tab-whitepaper active">특허</button>
+                    <button data-target="tab2" class="tab tab-case-study">논문</button>
+                    <button data-target="tab3" class="tab tab-technical-docs">기술자료</button>
+                </div>
+                <div class="research-content-area">
+                    <div id="tab1" class="research-content" style="display: block;">
+                        <ul>
+                            <li><a href="./files/patent1.pdf" target="_blank">블록체인 기반 추적관리 시스템의 개념 및 설계를 다룬 백서 자료입니다.</a></li>
+                            <li><a href="./files/patent2.pdf" target="_blank">블록체인 기반 추적관리 시스템의 개념 및 설계를 다룬 백서 자료입니다.</a></li>
+                            <li><a href="./files/patent3.pdf" target="_blank">블록체인 기반 추적관리 시스템의 개념 및 설계를 다룬 백서 자료입니다.</a></li>
+                            <li><a href="./files/patent4.pdf" target="_blank">블록체인 기반 추적관리 시스템의 개념 및 설계를 다룬 백서 자료입니다.</a></li>
+                        </ul>
+                    </div>
+                    <div id="tab2" class="research-content" style="display: none;">
+                        <p>다양한 산업에서의 시스템 적용 사례와 효과 분석을 정리한 문서입니다.</p>
+                        <p>다양한 산업에서의 시스템 적용 사례와 효과 분석을 정리한 문서입니다.</p>
+                        <p>다양한 산업에서의 시스템 적용 사례와 효과 분석을 정리한 문서입니다.</p>
+                        <p>다양한 산업에서의 시스템 적용 사례와 효과 분석을 정리한 문서입니다.</p>
+                    </div>
+                    <div id="tab3" class="research-content" style="display: none;">
+                        <p>플랫폼 구성 기술 및 아키텍처에 대한 상세 기술 문서입니다.</p>
+                        <p>플랫폼 구성 기술 및 아키텍처에 대한 상세 기술 문서입니다.</p>
+                        <p>플랫폼 구성 기술 및 아키텍처에 대한 상세 기술 문서입니다.</p>
+                        <p>플랫폼 구성 기술 및 아키텍처에 대한 상세 기술 문서입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>자주 묻는 질문</h2>
+                </div>
+                <p class="section-description">
+                    블록체인 기반 시스템에 대한 주요 질문과 답변을 제공합니다.<br>
+                    시스템의 활용성과 이점을 확인하세요.
+                </p>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">블록체인 기반 추적 시스템이란 무엇인가요?</button>
+                        <div class="accordion-content">
+                            블록체인을 활용하여 제품 또는 데이터의 이동과 변경 사항을 투명하게 기록하고 검증할 수 있는 시스템입니다.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">이 시스템은 어떤 산업에 적용할 수 있나요?</button>
+                        <div class="accordion-content">
+                            농식품, 의약품, 유통, 제조 등 공급망 추적이 중요한 다양한 산업에 적용할 수 있습니다.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger">도입 시 어떤 이점이 있나요?</button>
+                        <div class="accordion-content">
+                            데이터의 신뢰도 향상, 위변조 방지, 투명한 공급망 관리 등을 통해 브랜드 신뢰도와 소비자 만족도를 높일 수 있습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="section-container">
+            <p>&copy; 2025 블록체인 추적관리 시스템. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

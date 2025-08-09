@@ -1,5 +1,27 @@
 /* 웹폰트 가져오기 */
-@import url('https://cdn.jsdelivr.net/gh/webfontworld/kopubworlddotum/kopubworlddotum.css');
+@import url('https://cdn.jsdelivr.net/gh/webfontworld/kopubworld/kopubworlddotum.css');
+
+/* KoPubWorld Dotum 폰트 웨이트 정의 */
+@font-face {
+    font-family: 'KoPubWorldDotum';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/kopubworld/KoPubWorldDotumLight.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KoPubWorldDotum';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/kopubworld/KoPubWorldDotumMedium.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KoPubWorldDotum';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/kopubworld/KoPubWorldDotumBold.woff2') format('woff2');
+    font-display: swap;
+}
 
 /* reset */
 * {
@@ -9,8 +31,8 @@
 }
 
 body {
-  font-family: 'KoPubWorld Dotum',sans-serif;
-  font-weight: 400;
+  font-family: 'KoPubWorldDotum', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  font-weight: 500;  /* Medium 웨이트 사용 */
   font-size: 18px;
   line-height: 1.5;
   background-color: #fff;
@@ -64,9 +86,21 @@ a {
 }
 
 .logo {
+  font-family: 'KoPubWorldDotum', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  font-weight: 700;  /* Bold 웨이트 사용 */
   font-size: 24px;
-  font-weight: bold;
   margin-left: 40px;
+}
+
+.logo-image {
+  height: 80px; /* 로고 이미지 높이 조정 */
+  width: auto; /* 비율 유지 */
+  display: block;
+}
+
+.main-nav {
+    font-family: 'KoPubWorldDotum', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    font-weight: 500;  /* Medium 웨이트 사용 */
 }
 
 .main-nav ul {
@@ -152,12 +186,11 @@ main {
 
 .intro-section,
 .service-section,
-.research-section,
-.faq-section {
+.research-section {
   background-color: #fff; /* 흰색 배경 */
   color: #000; /* 검정 글씨 */
-  margin: 40px 0 ; /* 섹션 간격 추가 */
-  padding: 40px 20px; /* 섹션 내부 여백 */
+  margin: 20px 0 ; /* 섹션 간격 추가 */
+  padding: 140px 20px 0px; /* 섹션 내부 여백 */
   border-radius: 0; /* 둥근 모서리 제거 */
   box-shadow: none; /* 그림자 제거 */
   margin-bottom: 40px; /* 섹션 간의 간격 추가 */
@@ -168,22 +201,39 @@ main {
   text-align: center; /* 텍스트 중앙 정렬 */
 }
 
+.faq-section {
+  background-color: #fff; /* 흰색 배경 */
+  color: #000; /* 검정 글씨 */
+  margin: 20px 0 ; /* 섹션 간격 추가 */
+  padding: 140px 20px 300px; /* 섹션 내부 여백 */
+  border-radius: 0; /* 둥근 모서리 제거 */
+  box-shadow: none; /* 그림자 제거 */
+  margin-bottom: 40px; /* 섹션 간의 간격 추가 */
+  display: flex; /* Flexbox를 사용하여 정렬 */
+  flex-direction: column; /* 콘텐츠를 세로로 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
 .section-container {
-  margin: 80px 0 10px 0;
-  max-width: 1000px;
+  margin: 2ch 0 10px 0;
+  max-width: 1200px;
 }
 
 .section-header h2 {
+  font-family: 'KoPubWorldDotum', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  font-weight: 700;  /* Bold 웨이트 사용 */
   font-size: 50px;
   margin-bottom: 20px;
-  color: #000;
+  color: #40b5f5;
 }
 
 .section-description {
-  font-size: 16px;
+  font-size: 20px;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   line-height: 1.5;
+  
 }
 
 .section-image img {
@@ -192,39 +242,109 @@ main {
 }
 
 .service-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
 }
 
 .card {
-  flex: 1 1 calc(33.333% - 20px);
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
+    position: relative;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+/* 각 카드별 배경 이미지 설정 - 더 진한 그라데이션 */
+.card:nth-child(1) .card-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('../images/blockchain1.jpg');
+}
+
+.card:nth-child(2) .card-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('../images/sw-tracking2.jpg');
+}
+
+.card:nth-child(3) .card-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('../images/distribution2.jpg');
 }
 
 .card-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;  /* 패딩 감소 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.card-content h3 {
+    color: white;
+    font-size: 22px;  /* 제목 크기 약간 감소 */
+    margin-top: 40px;  /* 상단 여백 감소 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.card-content p {
+    color: white;
+    font-size: 16px;  /* 설명 텍스트 크기 감소 */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    margin-top: auto;
+    visibility: hidden;
+    max-width: 90%;  /* 최대 너비 증가 */
+    line-height: 1.4;  /* 줄간격 감소 */
+    padding: 0 10px;  /* 좌우 패딩 추가 */
+    margin-bottom: 40px;  /* 상단 여백 감소 */
+}
+
+/* 호버 효과 */
+.card:hover .card-bg {
+    transform: scale(1.1);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), url('../images/blockchain1.jpg');
+}
+
+.card:nth-child(2):hover .card-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), url('../images/sw-tracking2.jpg');
+}
+
+.card:nth-child(3):hover .card-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%), url('../images/distribution2.jpg');
+}
+
+.card:hover .card-content {
+    background: rgba(0, 72, 255, 0.85);
+}
+
+.card:hover .card-content h3 {
+    transform: translateY(-20px);
+}
+
+.card:hover .card-content p {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
 
 .research-tabs {
@@ -238,6 +358,7 @@ main {
 .research-tabs button {
   color: white;
   padding: 8px 30px;
+  font-size: 20px;
   font-weight: 500;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -278,8 +399,7 @@ main {
   width: 100%;
   text-align: left;
   padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
   cursor: pointer;
   color: #000;
 }
@@ -306,63 +426,91 @@ main {
 }
 
 @media (max-width: 1000px) {
-  .main-nav ul {
-      flex-direction: column;
-      gap: 5px;
-  }
+    .main-nav {
+        display: none; /* 네비게이션 메뉴 숨김 */
+    }
 
-  .login-button {
-      text-align: center;
-      width: 100%;
-      padding: 10px 0;
-  }
+    .main-nav.active {
+        display: block; /* 활성화될 때만 보이게 함 */
+    }
 
-  .video-overlay {
+    .main-nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .login-button {
+        margin: 0;  /* 기존 마진 제거 */
+        width: auto;  /* 자동 너비로 변경 */
+        padding: 0;  /* 패딩 제거 */
+    }
+
+    .video-overlay {
       font-size: 20px;
       padding: 0 10px;
-  }
+    }
 
-  .service-cards {
-      flex-direction: column;
-  }
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 
-  .card {
-      flex: 1 1 100%;
-  }
+    .card {
+        width: 90%;
+        max-width: 300px;
+        height: 300px;
+    }
 
-  .section-header h2 {
+    .section-header h2 {
       font-size: 28px;
-  }
+    }
 
-  .section-description {
+    .section-description {
       font-size: 14px;
-  }
+    }
 
-  .accordion-trigger {
-      font-size: 16px;
-  }
+    .accordion-trigger {
+      font-size: 14px;
+    }
 
-  .card-content h3 {
+    .card-content h3 {
       font-size: 18px;
-  }
+    }
 
-  .card-content p {
+    .card-content p {
       font-size: 14px;
-  }
+    }
 
-  .logo {
-      text-align: center;
-      margin: 0 auto;
-  }
+    .research-tabs button {
+      font-size: 14px;    }
 
-  .site-header,
-  .sticky-header {
-      flex-direction: column;
+    .site-header,
+    .sticky-header {
+      flex-direction: row;
       align-items: center;
+    }
+    .site-header .container,
+    .site-sticky .container {
+        flex-direction: row;  /* 가로 배치로 변경 */
+        justify-content: space-between; /* 양끝 배치 */
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .logo-image {
+        height: 50px; /* 모바일에서는 좀 더 작게 표시 */
+    }
+
+    .intro-section,
+    .service-section,
+    .research-section,
+    .faq-section {
+      padding: 20px;;
+    }
+
+    a {
+      font-size : 14px; /* 모바일에서 폰트 크기 조정 */
+    }
   }
-  .site-header .container,
-  .sticky-header .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
